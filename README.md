@@ -1,12 +1,10 @@
 # cybersecurity-portfolio
-This repository contains my cybersecurity portfolio, showcasing my projects, skills, and career aspirations.
-# Cybersecurity Portfolio
-Welcome to my cybersecurity portfolio! This portfolio serves as a showcase of my journey, skills, and projects in the field of cybersecurity. Through this page, I aim to highlight my technical expertise, learning progress, and career aspirations as I work towards becoming a professional in this exciting field.
+Welcome to my cybersecurity portfolio! This repository highlights my projects, technical skills, and career aspirations in the exciting field of cybersecurity.
 
 ---
 
 ## About Me
-Hello! My name is Pei Jiaxiang, and I am a student majoring in cyber security at the University of Malaya. I have only recently come into contact with the subject of cyber security. I hope you can give me some professional guidance and suggestions. Thank you.
+Hello! My name is Pei Jiaxiang, and I am a student majoring in cyber security at the University of Malaya. I am passionate about learning cybersecurity and exploring how to secure systems and networks. Although I am new to this field, I am eager to grow my skills through hands-on projects and professional guidance.Thank you.
 ![My Profile Photo](Me.jpg)
 ---
 
@@ -25,58 +23,71 @@ Here are the technical skills and tools I have acquired so far in my cybersecuri
 ---
 
 ## Certifications and Training
-I am a newbie in network security and I don’t have professional certificates or training.Sry for that.
+I am currently focusing on building my foundational knowledge in cybersecurity. While I don't yet hold professional certifications, I have completed hands-on learning and challenges on the following platforms:
+
+- **Hack The Box:**  
+  - Completed several beginner to intermediate-level machines, focusing on penetration testing and privilege escalation.  
+  - Learned how to exploit common vulnerabilities in web applications, misconfigured services, and network protocols.  
+
+- **TryHackMe:**  
+  - Completed modules such as "Pre-Security," "Complete Beginner," and "Introduction to Web Hacking."  
+  - Gained practical experience in areas like reconnaissance, exploitation, and post-exploitation techniques.  
+  - Earned badges for completing challenges like "Advent of Cyber" and "OWASP Top 10."
+
+### Planned Certifications
+I plan to pursue the following certifications in the near future:
+- CompTIA Security+  
+- Certified Ethical Hacker (CEH)  
+- Offensive Security Certified Professional (OSCP)
 
 ## Project Experience
 
-### 1. Network Vulnerability Scanning
-- **Objective:** Conducted a thorough vulnerability assessment on a simulated enterprise network to identify potential entry points for attackers.
-- **Tools Used:** Nmap, Wireshark, Nessus
+### 1. Automated Vulnerability Scanning with Shodan and Telegram Integration
+
+- **Objective:**  
+  Build an automated vulnerability scanning tool using the Shodan API to identify exposed services on the internet, analyze their vulnerabilities, and send real-time notifications through Telegram.
+
+- **Tools Used:**  
+  - Programming Language: Python  
+  - Libraries: `shodan`, `requests`, `logging`, `datetime`, `pandas`, `plotly.express`, `streamlit`  
+  - APIs: Shodan API, Telegram Bot API  
+
 - **Methodologies:**  
-  - Performed port scanning to identify open ports and running services.  
-  - Used Nessus to detect vulnerabilities and misconfigurations in the network.  
-  - Analyzed network traffic with Wireshark to detect potential anomalies.
-- **Outcome:** Successfully identified and mitigated 10+ vulnerabilities by suggesting firewall rules, patching outdated software, and enhancing network segmentation.
+  1. **Shodan Vulnerability Scanning:**  
+     - Used the Shodan API to scan specific IP addresses for open ports, services, and known vulnerabilities (e.g., CVEs).  
+     - Extracted detailed information about each service, such as port number, service type, and CVSS scores for vulnerabilities.  
+  2. **Severity Classification:**  
+     - Classified vulnerabilities into severity levels (e.g., CRITICAL, HIGH, MEDIUM) based on their CVSS scores.  
+     - Implemented a helper function to dynamically assess severity levels and generate a detailed report.  
+  3. **Telegram Integration:**  
+     - Integrated Telegram Bot API to send vulnerability reports to a designated chat, splitting long messages into manageable parts.  
+     - Used Markdown formatting to make the reports visually clear and concise.  
+  4. **Streamlit-Based Dashboard:**  
+     - Built an interactive UI using Streamlit for users to input configuration details such as Shodan API key, target IP address, and Telegram credentials.  
+     - Visualized vulnerability severity distribution with dynamic pie charts and metrics using Plotly.
+
+- **Results:**  
+  - Successfully scanned the target IP (`58.71.197.116`) and identified vulnerabilities, including:  
+    - Outdated FTP services on port 21 with known CVE vulnerabilities.  
+    - Misconfigured services exposing sensitive data.  
+  - Sent real-time vulnerability reports to Telegram, enabling quick action or remediation.  
+  - Created a user-friendly dashboard to allow non-technical users to perform scans and review results interactively.
+
+- **Key Features:**  
+  - Automated classification of vulnerabilities based on CVSS scores.  
+  - Real-time notifications via Telegram with detailed vulnerability descriptions and suggestions.  
+  - Interactive vulnerability visualization with distribution charts and severity metrics.  
+
+- **Key Learnings:**  
+  - Gained hands-on experience with Shodan's API and query syntax to programmatically analyze exposed services.  
+  - Learned to integrate external services (like Telegram) with Python for real-time notifications.  
+  - Enhanced UI/UX design skills by building a Streamlit-based interface to simplify user interaction.  
+  - Improved understanding of vulnerability scoring systems like CVSS and their practical application in security assessments.
 
 ---
 
-### 2. Password Strength Analysis
-- **Objective:** Evaluate the strength of password policies and identify weaknesses in password configurations.
-- **Tools Used:** John the Ripper, Hashcat
-- **Methodologies:**  
-  - Simulated brute-force and dictionary attacks on password hashes.  
-  - Analyzed the results to determine common patterns in weak passwords.  
-  - Generated a report with recommendations for creating stronger password policies.
-- **Outcome:** Improved password security by implementing complexity rules, including minimum length, special characters, and password rotation policies.
-
----
-
-### 3. Web Application Vulnerability Assessment
-- **Objective:** Test a mock web application for common vulnerabilities such as SQL injection, XSS, and insecure authentication mechanisms.
-- **Tools Used:** Burp Suite, OWASP ZAP
-- **Methodologies:**  
-  - Identified SQL injection vulnerability in login forms.  
-  - Detected insecure cookie handling that exposed session IDs.  
-  - Used Burp Suite to analyze and exploit reflected XSS vulnerabilities.
-- **Outcome:** Delivered a report outlining all detected vulnerabilities and proposed fixes, such as input validation and secure cookie practices.
-
----
-
-## Learning Journey
-My journey in cybersecurity has been both challenging and rewarding. Here are some highlights of what I have learned so far:
-
-- **Learned Skills:**  
-  - Mastered the basics of network scanning and vulnerability assessment.  
-  - Gained hands-on experience with tools like Nmap, Wireshark, and Metasploit.  
-  - Developed a foundational understanding of penetration testing methodologies.
-
-- **Challenges Faced:**  
-  - Cryptography remains one of the more challenging areas for me, especially when it comes to understanding advanced encryption algorithms.  
-  - Malware analysis is another topic I find difficult, as it requires deep technical knowledge of reverse engineering and debugging.
-
-- **Future Plans:**  
-  - I plan to dedicate more time to studying cryptography concepts by enrolling in specialized courses and practicing with tools like OpenSSL.  
-  - I also aim to improve my skills in reverse engineering by working on real-world malware samples in a controlled lab environment.
+#### **Example Shodan Query Syntax**
+During the project, I used Shodan's advanced query syntax to filter results effectively. Some key examples include:
 
 ---
 
@@ -88,7 +99,4 @@ As an aspiring cybersecurity professional, my ultimate goal is to specialize in 
 ## Contact Information
 Feel free to reach out to me for collaboration, project discussions, or career opportunities:
 
-- **Email:** yourname@example.com  
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourname)  
-- **GitHub:** [Your GitHub Profile](https://github.com/yourusername)  
-- **Portfolio Website:** [Cybersecurity Portfolio](https://yourusername.github.io/cybersecurity-portfolio/)
+- **Email:** a1265968926@gmail.com  
