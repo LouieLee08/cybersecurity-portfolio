@@ -7,7 +7,7 @@ Welcome to my cybersecurity portfolio! This portfolio serves as a showcase of my
 
 ## About Me
 Hello! My name is Pei Jiaxiang, and I am a student majoring in cyber security at the University of Malaya. I have only recently come into contact with the subject of cyber security. I hope you can give me some professional guidance and suggestions. Thank you.
-
+![My Profile Photo](Me.jpg)
 ---
 
 ## Technical Skills
